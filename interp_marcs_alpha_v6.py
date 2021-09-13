@@ -476,7 +476,6 @@ model_mass=1.0, micro_turb_vel=2., path='.'):
         if geometry == 'pp':
             geostr = 'p'
             model_mass = 0.0 #overwrite default parameters
-            micro_turb_vel = 1. #
 
         try:
             zclass = check_zclass(fehi, alphai)
