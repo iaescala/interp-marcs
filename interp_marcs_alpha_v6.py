@@ -450,8 +450,10 @@ def select_grid_points(params, params_grid, step):
                 while (np.abs(np.diff(params_grid[i][iparam])[0]) < step[i]):
                     left = params[i] - params_grid[i][iparam[0]]
                     right = params_grid[i][iparam[1]] - params[i]
-                    if left < right: iparam[1] += 1
-                    else: iparam[0] -= 1
+                    if (left < right) and (iparam[1] != params_grid[i].size-1):
+                        iparam[1] += 1
+                    else:
+                        iparam[0] -= 1
 
                 iparams[i] = iparam
 
