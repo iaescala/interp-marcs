@@ -259,7 +259,8 @@ check_file_exists=True, optimize=False, extrapol=False):
 
   #Output file names for Turbospec and ATLAS compatible models
   modelout1 = construct_model_filename(teff, logg, feh, alphafe,
-              path=output_model_path, geometry=geometry)
+              path=output_model_path, geometry=geometry, model_mass=model_mass,
+              micro_turb_vel=micro_turb_vel)
   modelout2 = modelout1[:-4]+'.alt'
 
   interpolie(model1, model2, model3, model4, model5, model6, model7, model8,
