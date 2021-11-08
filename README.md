@@ -13,4 +13,6 @@ Assumptions: Linear interpolation only. Optimal interpolation (see T. Masseron's
 
 System requirements: Depending on the user's operating system, it may be necessary to re-wrap the Fortran code. A bash script (pyrap_alpha.sh) can be run in the same directory as the Fortran files to accomplish this. A Python-wrapped version of the Fortran code comptabible with Linux is provided in this repository. (I have also Python-wrapped the Fortran code with success on macOS.)
 
+For now, if you use this code in your research, please link to this repository, and state that it is I. Escala's modification of T. Masseron's code
+
 
