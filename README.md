@@ -15,7 +15,7 @@ Models are interpolated/extrapolated from the default grid with a minimum Fe/H s
 
 Linear interpolation only. Optimal interpolation (see T. Masseron's documentation) incomptaible with 4D interpolation that includes [alpha/Fe]. Spherical model atmospheres assumed for Logg <= 3.5 unless otherwise specified by user via the optional keyword argument "geometry". For spherical geometry, model mass of 1.0 Msun and microturbulent velocity of 2 km/s is adopted. For plane parallel geometry, micoturbulent velocity of 1 km/s is adopted. However, both model_mass and micro_turb_vel can be explicitly specified by the user. Additionally, by default the code checks whether a file exists in the default MARCS grid, or in the directory where the user is saving the newly generated models, before proceeding. The code extrapolates by default, but the user may restrict the program to interpolation only.
 
-# System Requirements $
+# System Requirements #
 
 Depending on the user's operating system, it may be necessary to re-wrap the Fortran code. A bash script (pyrap_alpha.sh) can be run in the same directory as the Fortran files to accomplish this. A Python-wrapped version of the Fortran code comptabible with Linux is provided in this repository. (I have also Python-wrapped the Fortran code with success on macOS.)
 
