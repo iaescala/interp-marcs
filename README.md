@@ -7,6 +7,8 @@ MARCS models (including Fortran code documentation): https://marcs.astro.uu.se/
 
 # Usage #
 
+Prior to usage, I recommend reaading the manual for the Fortran MARCS interpolator, particularly Sections 4.4 and 4.5.
+
 Example code to generate grid of MARCS model atmospheres contained in testmies.py. The Python function interp_marcs takes the parameters (Teff, Logg, Feh, Alphafe) of the desired interpolated/extrapolated model as input, and finds an appropriate selection of default MARCS models to utilize in generation of the user-specified interpolated/extrapolated model. These selected default models are then fed into the Python-wrapped Fortran interpolator.
 
 Models are interpolated/extrapolated from the default grid with a minimum Fe/H spacing of 0.5 dex and [alpha/Fe] spacing of 0.4 dex. Note that the user must use their own discretion when evaluating the performance of the interpolator/extrapolator outside of the bounds tested by T. Masseron. Also note that this code has been extensively tested for interpolation/extrapolation simultaneously in Fe/H and Alpha/Fe, but keeping Teff and Logg fixed to default MARCS grid points. In principle simultaneous extrapolation in 3 or 4 parameters should work, but I have not explicitly tested this.
