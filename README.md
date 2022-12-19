@@ -7,7 +7,7 @@ MARCS models (including Fortran code documentation): https://marcs.astro.uu.se/
 
 # Usage #
 
-Prior to usage, I recommend reaading the manual for the Fortran MARCS interpolator, particularly Sections 4.4 and 4.5.
+Prior to usage, I recommend reading the manual for the Fortran MARCS interpolator, particularly Sections 4.4 and 4.5.
 
 Example code to generate grid of MARCS model atmospheres contained in testmies.py. The Python function interp_marcs takes the parameters (Teff, Logg, Feh, Alphafe) of the desired interpolated/extrapolated model as input, and finds an appropriate selection of default MARCS models to utilize in generation of the user-specified interpolated/extrapolated model. These selected default models are then fed into the Python-wrapped Fortran interpolator.
 
