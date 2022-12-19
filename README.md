@@ -5,6 +5,8 @@ All modifications in Fortran code to accomodate interpolation/extrapolation of [
 
 MARCS models (including Fortran code documentation): https://marcs.astro.uu.se/
 
+Much more complete APOGEE grid of MARCS models (Jonsson+20, by B. Edvardsson), under the "model atmospheres" section: https://www.sdss4.org/dr17/irspec/apogee-libraries/
+
 # Usage #
 
 Prior to usage, I recommend reading the manual for the Fortran MARCS interpolator, particularly Sections 4.4 and 4.5.
