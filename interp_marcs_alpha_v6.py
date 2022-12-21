@@ -284,7 +284,6 @@ grid_type = 'default'):
               path=output_model_path, geometry=geometry, model_mass=model_mass,
               micro_turb_vel=micro_turb_vel, grid_type=grid_type,
               output=True)
-  modelout1 += '.interp'
   modelout2 = modelout1[:-4]+'.alt'
 
   interpolie(model1, model2, model3, model4, model5, model6, model7, model8,
