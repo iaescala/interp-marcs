@@ -282,7 +282,9 @@ grid_type = 'default'):
   #Output file names for Turbospec and ATLAS compatible models
   modelout1 = construct_model_filename(teff, logg, feh, alphafe,
               path=output_model_path, geometry=geometry, model_mass=model_mass,
-              micro_turb_vel=micro_turb_vel)
+              micro_turb_vel=micro_turb_vel, grid_type=grid_type,
+              output=True)
+  modelout1 += '.interp'
   modelout2 = modelout1[:-4]+'.alt'
 
   interpolie(model1, model2, model3, model4, model5, model6, model7, model8,
@@ -474,7 +476,8 @@ def select_grid_points(params, params_grid, step):
     return iparams
 
 def construct_model_filename(teffi, loggi, fehi, alphai, geometry='sph',
-model_mass=1.0, micro_turb_vel=2., path='.', grid_type='default'):
+model_mass=1.0, micro_turb_vel=2., path='.', grid_type='default',
+output=False):
 
         #The user is allowed to define the geometry to some extent,
         #but there are limits as described above
@@ -517,14 +520,23 @@ model_mass=1.0, micro_turb_vel=2., path='.', grid_type='default'):
 
         vt_str = f'0{int(micro_turb_vel)}'
 
-        modelfn = (f"{path}/{geostr}{int(teffi)}_g{gsign}{np.abs(loggi)}"
-                   f"_m{model_mass}_t{vt_str}_{zclass}_z{fsign}{feh_str}"
-                   f"_a{asign}{alpha_str}_c+0.00_n+0.00_o{asign}{alpha_str}"
-                   f"_r+0.00_s+0.00.mod")
+        if grid_type == 'default':
+            modelfn = (f"{path}/{geostr}{int(teffi)}_g{gsign}{np.abs(loggi)}"
+                       f"_m{model_mass}_t{vt_str}_{zclass}_z{fsign}{feh_str}"
+                       f"_a{asign}{alpha_str}_c+0.00_n+0.00_o{asign}{alpha_str}"
+                       f"_r+0.00_s+0.00.mod")
 
         #Some of the models end in 'filled' for MARCS-APOGEE
         if grid_type == 'apogee':
-            if not does_gridpoint_exist(modelfn):
+
+            if not output: path = f"{path}/mod_z{fsign}{feh_str}"
+
+            modelfn = (f"{path}/{geostr}{int(teffi)}_g{gsign}{np.abs(loggi)}"
+                       f"_m{model_mass}_t{vt_str}_{zclass}_z{fsign}{feh_str}"
+                       f"_a{asign}{alpha_str}_c+0.00_n+0.00_o{asign}{alpha_str}"
+                       f"_r+0.00_s+0.00.mod")
+
+            if (not output) and (not does_gridpoint_exist(modelfn)):
                 modelfn = modelfn+".filled"
 
         return modelfn
