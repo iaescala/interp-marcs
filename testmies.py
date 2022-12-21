@@ -23,4 +23,4 @@ for teff in teff_arr:
 				output_model_path=output_model_path,
 				input_model_path=input_model_path,
 				check_file_exists=True, extrapol=False,
-				geometry='sph')
+				geometry='sph', grid_type='apogee')
