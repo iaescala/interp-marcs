@@ -22,5 +22,5 @@ for teff in teff_arr:
 				interp_marcs(teff, logg, feh, alphafe,
 				output_model_path=output_model_path,
 				input_model_path=input_model_path,
-				check_file_exists=True, extrapol=True,
+				check_file_exists=True, extrapol=False,
 				geometry='sph')
