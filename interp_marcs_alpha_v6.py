@@ -295,7 +295,7 @@ grid_type = 'default'):
 
 
 def increment_grid_point(index, iparams, params_grid, grid_point_exists,
-kwargs, kind='-', extrapol=False, step=step):
+kwargs, kind='-', extrapol=False, step=None):
 
     hit_grid_edge = False
     interp_flag = False
@@ -611,7 +611,7 @@ def does_gridpoint_exist(modelfn):
     return grid_point_exists
 
 def increment_grid_point_2D(iparams, params_grid, grid_point_exists_0,
- kwargs, step=step):
+ kwargs, step=None):
 
     #Increase Fe and alpha
     iparams_f, interp_flag = while_loop(iparams, params_grid, grid_point_exists_0,
@@ -635,7 +635,7 @@ def increment_grid_point_2D(iparams, params_grid, grid_point_exists_0,
     return iparams_f, interp_flag
 
 def while_loop(iparams, params_grid, grid_point_exists_0, kwargs,
-               kind_f='+', kind_a='+', step=step):
+               kind_f='+', kind_a='+', step=None):
 
     index_f = 2
     index_a = 3
