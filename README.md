@@ -5,7 +5,7 @@ All modifications in Fortran code to accomodate interpolation of [alpha/Fe] are 
 
 MARCS models (including Fortran code documentation): https://marcs.astro.uu.se/
 
-Much more complete/regularly spaced APOGEE grid of MARCS models (Jonsson+20, by B. Edvardsson), under the "model atmospheres" section: https://www.sdss4.org/dr17/irspec/apogee-libraries/
+Much more complete/regularly spaced APOGEE grid of MARCS models (Jonsson+20, by B. Edvardsson), under the "model atmospheres" section (recommended, set grid_type = 'apogee'): https://www.sdss4.org/dr17/irspec/apogee-libraries/
 
 # Usage #
 
