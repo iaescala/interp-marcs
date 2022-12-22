@@ -18,9 +18,17 @@ for teff in teff_arr:
 			for alphafe in alphafe_arr:
 
 				print(teff, logg, feh, alphafe)
+				
+				if logg > 3:
+				   geo = 'pp'
+                    		   vt = 1.
+                		else:
+                    		   geo = 'sph'
+                    		   vt = 2.
 
 				interp_marcs(teff, logg, feh, alphafe,
 				output_model_path=output_model_path,
 				input_model_path=input_model_path,
 				check_file_exists=True, extrapol=False,
-				geometry='sph', grid_type='apogee')
+				geometry=geo, grid_type='apogee',
+			        micro_turb_vel=vt)
