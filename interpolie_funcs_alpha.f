@@ -466,8 +466,8 @@ c           Added by I.Escala to handle MARCS file format errors
               line=''
               backspace(imod)
               read(imod,'(a)') line
-              read(line(39:48), '(f10.3)') Vconv(k)
-              read(line(49:56), '(f8.5)') Fconv(k)
+              read(line(41:50), '(f10.3)') Vconv(k)
+              read(line(51:58), '(f8.5)') Fconv(k)
 c              print*,tauR(k),xkapr(k),ro(k),emu(k),Vconv(k),Fconv(k)
             endif
 
