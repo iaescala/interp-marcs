@@ -29,6 +29,6 @@ Depending on the user's operating system, it may be necessary to re-wrap the For
 
 # Citation #
 
-For now, if you use this code in your research, please link to this repository, and state that it is I. Escala's modification of T. Masseron's code
+For now, if you use this code in your research, please link to this repository, and state that it is I. Escala's modification of T. Masseron's code (Escala et al. 2023, in preparation)
 
 
