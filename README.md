@@ -7,6 +7,8 @@ MARCS models (including Fortran code documentation): https://marcs.astro.uu.se/
 
 Much more complete/regularly spaced APOGEE grid of MARCS models (Jonsson+20, by B. Edvardsson), under the "model atmospheres" section (recommended, set grid_type = 'apogee'): https://www.sdss4.org/dr17/irspec/apogee-libraries/
 
+NOTE!!! KNOWN ISSUE INTERPOLATING PLANE-PARALLEL MODELS.
+
 # Usage #
 
 Prior to usage, I recommend reading the manual for the Fortran MARCS interpolator, particularly Sections 4.4 and 4.5.
